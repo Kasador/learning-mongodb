@@ -1,51 +1,14 @@
 const router = require('express').Router();
+const { getAllRooms, getRoomById, createRoom, updateRoomById, deleteRoomById } = require('../controller/roomsController');
 
-router.get('/', (req, res) => {
-    res.status(200).json({
-        sucess: true,
-        message: `Request Made: ${req.method} from Rooms endpoint.`
-    })
-});
+router.get('/', getAllRooms);
 
-router.get('/:id', (req, res) => {
-    const { id } = req.params;
+router.get('/:id', getRoomById);
 
-    res.status(200).json({
-        sucess: true,
-        message: `Request Made: ${req.method} from Rooms endpoint.`,
-        id
-    });
-});
+router.post('/', createRoom);
 
-router.post('/', (req, res) => {
-    const { id } = req.params;
+router.put('/:id', updateRoomById);
 
-    res.status(200).json({
-        sucess: true,
-        message: `Request Made: ${req.method} from Rooms endpoint.`,
-        id
-    });
-});
-
-
-router.put('/:id', (req, res) => {
-    const { id } = req.params;
-
-    res.status(200).json({
-        sucess: true,
-        message: `Request Made: ${req.method} from Rooms endpoint.`,
-        id
-    });
-});
-
-router.delete('/:id', (req, res) => {
-    const { id } = req.params;
-
-    res.status(200).json({
-        sucess: true,
-        message: `Request Made: ${req.method} from Rooms endpoint.`,
-        id
-    });
-});
+router.delete('/:id', deleteRoomById);
 
 module.exports = router;
