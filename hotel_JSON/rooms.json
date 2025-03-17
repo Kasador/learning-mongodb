@@ -1,0 +1,171 @@
+[
+    {
+      "roomNumber": 134,
+      "guestId": "67d8833dfbb510535440a814",
+      "pricePerNight": 120.50,
+      "isBooked": true,
+      "checkInDate": "2025-03-20T14:00:00.000Z",
+      "checkOutDate": "2025-03-22T11:00:00.000Z"
+    },
+    {
+      "roomNumber": 142,
+      "guestId": "67d8833dfbb510535440a815",
+      "pricePerNight": 150.00,
+      "isBooked": false,
+      "checkInDate": null,
+      "checkOutDate": null
+    },
+    {
+      "roomNumber": 105,
+      "guestId": "67d8833dfbb510535440a816",
+      "pricePerNight": 95.00,
+      "isBooked": true,
+      "checkInDate": "2025-03-18T14:00:00.000Z",
+      "checkOutDate": "2025-03-20T11:00:00.000Z"
+    },
+    {
+      "roomNumber": 247,
+      "guestId": "67d8833dfbb510535440a817",
+      "pricePerNight": 110.75,
+      "isBooked": true,
+      "checkInDate": "2025-03-21T15:00:00.000Z",
+      "checkOutDate": "2025-03-23T11:00:00.000Z"
+    },
+    {
+      "roomNumber": 210,
+      "guestId": "67d8833dfbb510535440a818",
+      "pricePerNight": 135.00,
+      "isBooked": false,
+      "checkInDate": null,
+      "checkOutDate": null
+    },
+    {
+      "roomNumber": 313,
+      "guestId": "67d8833dfbb510535440a819",
+      "pricePerNight": 160.00,
+      "isBooked": true,
+      "checkInDate": "2025-03-25T14:00:00.000Z",
+      "checkOutDate": "2025-03-28T11:00:00.000Z"
+    },
+    {
+      "roomNumber": 228,
+      "guestId": "67d8833dfbb510535440a81a",
+      "pricePerNight": 125.00,
+      "isBooked": false,
+      "checkInDate": null,
+      "checkOutDate": null
+    },
+    {
+      "roomNumber": 136,
+      "guestId": "67d8833dfbb510535440a814",
+      "pricePerNight": 140.00,
+      "isBooked": true,
+      "checkInDate": "2025-03-22T14:00:00.000Z",
+      "checkOutDate": "2025-03-25T11:00:00.000Z"
+    },
+    {
+      "roomNumber": 220,
+      "guestId": "67d8833dfbb510535440a815",
+      "pricePerNight": 115.50,
+      "isBooked": false,
+      "checkInDate": null,
+      "checkOutDate": null
+    },
+    {
+      "roomNumber": 302,
+      "guestId": "67d8833dfbb510535440a816",
+      "pricePerNight": 145.00,
+      "isBooked": true,
+      "checkInDate": "2025-03-26T14:00:00.000Z",
+      "checkOutDate": "2025-03-28T11:00:00.000Z"
+    },
+    {
+      "roomNumber": 208,
+      "guestId": "67d8833dfbb510535440a817",
+      "pricePerNight": 130.00,
+      "isBooked": false,
+      "checkInDate": null,
+      "checkOutDate": null
+    },
+    {
+      "roomNumber": 222,
+      "guestId": "67d8833dfbb510535440a818",
+      "pricePerNight": 125.00,
+      "isBooked": true,
+      "checkInDate": "2025-03-15T14:00:00.000Z",
+      "checkOutDate": "2025-03-18T11:00:00.000Z"
+    },
+    {
+      "roomNumber": 308,
+      "guestId": "67d8833dfbb510535440a819",
+      "pricePerNight": 140.50,
+      "isBooked": true,
+      "checkInDate": "2025-03-19T14:00:00.000Z",
+      "checkOutDate": "2025-03-22T11:00:00.000Z"
+    },
+    {
+      "roomNumber": 209,
+      "guestId": "67d8833dfbb510535440a81a",
+      "pricePerNight": 155.00,
+      "isBooked": false,
+      "checkInDate": null,
+      "checkOutDate": null
+    },
+    {
+      "roomNumber": 305,
+      "guestId": "67d8833dfbb510535440a81b",
+      "pricePerNight": 130.00,
+      "isBooked": true,
+      "checkInDate": "2025-03-24T14:00:00.000Z",
+      "checkOutDate": "2025-03-26T11:00:00.000Z"
+    },
+    {
+      "roomNumber": 312,
+      "guestId": "67d8833dfbb510535440a818",
+      "pricePerNight": 110.50,
+      "isBooked": false,
+      "checkInDate": null,
+      "checkOutDate": null
+    },
+    {
+      "roomNumber": 303,
+      "guestId": "67d8833dfbb510535440a819",
+      "pricePerNight": 145.50,
+      "isBooked": true,
+      "checkInDate": "2025-03-20T14:00:00.000Z",
+      "checkOutDate": "2025-03-22T11:00:00.000Z"
+    },
+    {
+      "roomNumber": 248,
+      "guestId": "67d8833dfbb510535440a81a",
+      "pricePerNight": 160.00,
+      "isBooked": false,
+      "checkInDate": null,
+      "checkOutDate": null
+    },
+    {
+      "roomNumber": 310,
+      "guestId": "67d8833dfbb510535440a81b",
+      "pricePerNight": 170.00,
+      "isBooked": true,
+      "checkInDate": "2025-03-23T14:00:00.000Z",
+      "checkOutDate": "2025-03-25T11:00:00.000Z"
+    },
+    {
+      "roomNumber": 204,
+      "guestId": "67d8833dfbb510535440a818",
+      "pricePerNight": 155.50,
+      "isBooked": false,
+      "checkInDate": null,
+      "checkOutDate": null
+    },
+    {
+      "roomNumber": 131,
+      "guestId": "67d8833dfbb510535440a817",
+      "pricePerNight": 135.00,
+      "isBooked": true,
+      "checkInDate": "2025-03-28T14:00:00.000Z",
+      "checkOutDate": "2025-03-30T11:00:00.000Z"
+    }
+  ]
+  
