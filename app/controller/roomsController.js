@@ -1,3 +1,5 @@
+const Guests = require('../models/Rooms'); // import the Guests model
+
 const getAllRooms = (req, res) => { // get all rooms func
     res.status(200).json({
         sucess: true,
