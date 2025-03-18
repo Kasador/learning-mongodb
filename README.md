@@ -3,8 +3,8 @@
 
 ### Repo made to learn **_NodeJS w/ MongoDB._** This will also include making restful APIs and dealing with requests and responses.
 
-# ❗ℹ️ Important Info
-
+# ❗ℹ️ Important Information
+- 📝 **_Reference_**: **[https://mongoosejs.com/docs/api/model.html](https://mongoosejs.com/docs/api/model.html)**
 ### Mongoose/MongoDB Models
 
 - `Model()` - Creates a new instance of the model.
