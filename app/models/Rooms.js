@@ -23,7 +23,7 @@ const roomsSchema = new mongoose.Schema({ // new class model
     }]},
 { timestamps: true });
 
-module.exports = mongoose.model("Rooms", roomsSchema); // defining the 'Guests' model
+module.exports = mongoose.model("Rooms", roomsSchema); // defining the 'Rooms' model
 
 /* References >>>
     1) https://www.w3schools.com/mongodb/mongodb_schema_validation.php

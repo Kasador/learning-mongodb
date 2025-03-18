@@ -6,7 +6,7 @@ const getAllGuests = async (req, res) => { // get all guests func
         
         res.status(200).json({
             data: guests,
-            sucess: true,
+            success: true,
             message: `Request Made: ${req.method} from Guests endpoint.`
         });
     } catch (error) {
@@ -28,7 +28,7 @@ const getGuestById = async (req, res) => { // get guests by id func
 
         res.status(200).json({
             data: guest,
-            sucess: true,
+            success: true,
             message: `Request Made: ${req.method} from Guests endpoint.`,
             id
         });
@@ -52,7 +52,7 @@ const createGuest = async (req, res) => { // create new guest func
 
         res.status(200).json({
             data: guest,
-            sucess: true,
+            success: true,
             message: `Request Made: ${req.method} from Guests endpoint.`
         });
     } catch (error) {
@@ -74,7 +74,7 @@ const updateGuestById = async (req, res) => { // update guests by id func
 
         res.status(200).json({
             data: guest,
-            sucess: true,
+            success: true,
             message: `Request Made: ${req.method} from Guests endpoint.`
         });
     } catch (error) {
@@ -96,7 +96,7 @@ const deleteGuestById = async (req, res) => { // delete guests by id func
 
         res.status(200).json({
             data: guest,
-            sucess: true,
+            success: true,
             message: `Request Made: ${req.method} from Guests endpoint.`,
             id
         });
