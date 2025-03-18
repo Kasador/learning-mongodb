@@ -6,7 +6,7 @@ const getAllRooms = async (req, res) => { // get all rooms func
         
         res.status(200).json({
             data: rooms,
-            sucess: true,
+            success: true,
             message: `Request Made: ${req.method} from Rooms endpoint.`
         });
     } catch (error) {
@@ -28,7 +28,7 @@ const getRoomById = async (req, res) => { // get rooms by id func
 
         res.status(200).json({
             data: rooms,
-            sucess: true,
+            success: true,
             message: `Request Made: ${req.method} from Rooms endpoint.`,
             id
         });
@@ -52,7 +52,7 @@ const createRoom = async (req, res) => { // create new room func
 
         res.status(200).json({
             data: newRoom,
-            sucess: true,
+            success: true,
             message: `Request Made: ${req.method} from Rooms endpoint.`
         });
     } catch (error) {
@@ -71,10 +71,10 @@ const updateRoomById = async (req, res) => { // update rooms by id func
 
     try {
         const room = await Rooms.findByIdAndUpdate(id, req.body, { new: true }); // 3 params - schema, data, new set to true (new version, not old)
-
+        console.log(room);
         res.status(200).json({
             data: room,
-            sucess: true,
+            success: true,
             message: `Request Made: ${req.method} from Rooms endpoint.`
         });
     } catch (error) {
@@ -96,7 +96,7 @@ const deleteRoomById = async (req, res) => { // delete rooms by id func
 
         res.status(200).json({
             data: room,
-            sucess: true,
+            success: true,
             message: `Request Made: ${req.method} from Rooms endpoint.`,
             id
         });

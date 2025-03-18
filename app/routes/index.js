@@ -7,7 +7,7 @@ router.get('/', (req, res) => { // main route to api/v1
 })
 
 router.use('/guests', guestRoutes); // guests routes api/v1/guests
-router.use('/rooms', roomRoutes); // rooms routes api/v1/guests
+router.use('/rooms', roomRoutes); // rooms routes api/v1/rooms
 
 
 module.exports = router;
