@@ -1,11 +1,11 @@
-const getAllRooms = (req, res) => {
+const getAllRooms = (req, res) => { // get all rooms func
     res.status(200).json({
         sucess: true,
         message: `Request Made: ${req.method} from Rooms endpoint.`
     })
 }
 
-const getRoomById = (req, res) => {
+const getRoomById = (req, res) => { // get rooms by id func
     const { id } = req.params;
 
     res.status(200).json({
@@ -15,14 +15,14 @@ const getRoomById = (req, res) => {
     });
 }
 
-const createRoom = (req, res) => {
+const createRoom = (req, res) => { // create new room func
     res.status(200).json({
         sucess: true,
         message: `Request Made: ${req.method} from Rooms endpoint.`
     })
 }
 
-const updateRoomById = (req, res) => {
+const updateRoomById = (req, res) => { // update rooms by id func
     const { id } = req.params;
 
     res.status(200).json({
@@ -32,7 +32,7 @@ const updateRoomById = (req, res) => {
     });
 }
 
-const deleteRoomById = (req, res) => {
+const deleteRoomById = (req, res) => { // delete rooms by id func
     const { id } = req.params;
 
     res.status(200).json({
@@ -42,7 +42,7 @@ const deleteRoomById = (req, res) => {
     });
 }
 
-module.exports = {
+module.exports = { // export all funcs
     getAllRooms,
     getRoomById,
     createRoom,
