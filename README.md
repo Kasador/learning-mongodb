@@ -1,194 +1,148 @@
 # 🗂 NodeJS/Express + MongoDB
-[![My Skills](https://skillicons.dev/icons?i=js,nodejs,express,mongodb)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,nodejs,express,mongodb,postman,npm)](https://skillicons.dev)
 
 ### Repo made to learn **_NodeJS w/ MongoDB._** This will also include making restful APIs and dealing with requests and responses.
 
 # ❗ℹ️ Important Info
 
-### Content-Type for Headers
+### Mongoose/MongoDB Models
 
-- `text/html`
-- `application/json`
-- `image/jpeg`
-- `image/png`
-- `image/gif`
-- `audio/mpeg`
-- `video/mp4`
-- `application/javascript`
-- `text/css`
-- `text/plain`
+- `Model()` - Creates a new instance of the model.
+- `Model.$where()` - Applies a JavaScript function as a query selector.
+- `Model.aggregate()` - Performs aggregation operations on the collection.
+- `Model.applyDefaults()` - Applies default values to a document.
+- `Model.applyTimestamps()` - Applies timestamps (`createdAt` and `updatedAt`) to a document.
+- `Model.applyVirtuals()` - Applies virtual fields to a document.
+- `Model.bulkSave()` - Saves multiple documents in bulk efficiently.
+- `Model.bulkWrite()` - Performs multiple write operations in bulk.
+- `Model.castObject()` - Casts an object to match the schema type definitions.
+- `Model.cleanIndexes()` - Removes unused indexes from the database.
+- `Model.countDocuments()` - Counts the number of documents matching a query.
+- `Model.create()` - Creates a new document and saves it to the database.
+- `Model.createCollection()` - Creates a new collection explicitly.
+- `Model.createIndexes()` - Ensures all indexes defined in the schema are created.
+- `Model.createSearchIndex()` - Creates a search index for full-text search.
+- `Model.db` - Provides access to the database instance.
+- `Model.deleteMany()` - Deletes multiple documents matching a query.
+- `Model.deleteOne()` - Deletes a single document matching a query.
+- `Model.diffIndexes()` - Compares schema indexes with MongoDB indexes.
+- `Model.discriminator()` - Creates a subclass of a model using an existing schema.
+- `Model.distinct()` - Finds distinct values for a specified field.
+- `Model.dropSearchIndex()` - Drops the full-text search index from the collection.
+- `Model.ensureIndexes()` - Ensures all defined indexes exist in the collection.
+- `Model.estimatedDocumentCount()` - Returns an estimated count of documents.
+- `Model.events` - Emits and listens to Mongoose events.
+- `Model.exists()` - Checks if a document matching a query exists.
+- `Model.find()` - Finds multiple documents that match a query.
+- `Model.findById()` - Finds a single document by its `_id` field.
+- `Model.findByIdAndDelete()` - Finds a document by `_id` and deletes it.
+- `Model.findByIdAndUpdate()` - Finds a document by `_id` and updates it.
+- `Model.findOne()` - Finds a single document that matches a query.
+- `Model.findOneAndDelete()` - Finds and deletes a document that matches a query.
+- `Model.findOneAndReplace()` - Finds and replaces a document that matches a query.
+- `Model.findOneAndUpdate()` - Finds and updates a document that matches a query.
+- `Model.hydrate()` - Converts a plain JavaScript object into a Mongoose document.
+- `Model.init()` - Initializes a model by ensuring indexes.
+- `Model.insertMany()` - Inserts multiple documents into the collection.
+- `Model.insertOne()` - Inserts a single document into the collection.
+- `Model.inspect()` - Provides debugging information about the model.
+- `Model.listIndexes()` - Lists all indexes in the collection.
+- `Model.listSearchIndexes()` - Lists search indexes in the collection.
+- `Model.namespace()` - Returns the namespace of the collection.
+- `Model.populate()` - Populates referenced fields with actual documents.
+- `Model.prototype.$model()` - Returns a model instance from a document.
+- `Model.prototype.$where` - Returns the JavaScript function used for `$where` queries.
+- `Model.prototype.base` - Provides access to the base Mongoose instance.
+- `Model.prototype.baseModelName` - Returns the name of the base model.
+- `Model.prototype.collection` - Returns the MongoDB collection associated with the model.
+- `Model.prototype.db` - Provides access to the database instance.
+- `Model.prototype.deleteOne()` - Deletes a document from the instance.
+- `Model.prototype.discriminators` - Returns the discriminators associated with the model.
+- `Model.prototype.increment()` - Increments a numeric field in the document.
+- `Model.prototype.model()` - Returns the model constructor from a document.
+- `Model.prototype.modelName` - Returns the name of the model.
+- `Model.prototype.save()` - Saves changes made to a document.
+- `Model.recompileSchema()` - Recompiles the model schema.
+- `Model.replaceOne()` - Replaces an existing document in the collection.
+- `Model.schema` - Provides access to the model schema.
+- `Model.startSession()` - Starts a new MongoDB transaction session.
+- `Model.syncIndexes()` - Synchronizes indexes with the database.
+- `Model.translateAliases()` - Converts alias field names to actual field names.
+- `Model.updateMany()` - Updates multiple documents that match a query.
+- `Model.updateOne()` - Updates a single document that matches a query.
+- `Model.updateSearchIndex()` - Updates the search index for the collection.
+- `Model.useConnection()` - Attaches the model to a different connection.
+- `Model.validate()` - Validates a document against the schema.
+- `Model.watch()` - Watches changes in the collection using MongoDB change streams.
+- `Model.where()` - Creates a query builder instance with a condition.
 
-### Setting Headers
+### Most Used Models
 
-- `res.setHeader(name, value)` - Sets a response header.
-- `res.getHeader(name)` - Retrieves a specific response header.
-- `res.removeHeader(name)` - Removes a response header.
-- `res.writeHead(statusCode, headers)` - Sets status code and multiple headers at once.
+- `Model.create()` - Creates a new document and saves it to the database.
+- `Model.find()` - Finds multiple documents that match a query.
+- `Model.findById(id)` - Finds a single document by its `_id` field.
+- `Model.findOne(query)` - Finds the first document that matches a query.
+- `Model.findByIdAndUpdate(id, update, options)` - Finds a document by `_id` and updates it.
+- `Model.findByIdAndDelete(id)` - Finds a document by `_id` and deletes it.
+- `Model.findOneAndUpdate(query, update, options)` - Finds and updates a document that matches a query.
+- `Model.findOneAndDelete(query)` - Finds and deletes a document that matches a query.
+- `Model.deleteMany(query)` - Deletes multiple documents matching a query.
+- `Model.deleteOne(query)` - Deletes a single document matching a query.
+- `Model.updateOne(query, update, options)` - Updates a single document that matches a query.
+- `Model.updateMany(query, update, options)` - Updates multiple documents that match a query.
+- `Model.countDocuments(query)` - Counts the number of documents matching a query.
+- `Model.exists(query)` - Checks if at least one document matching a query exists.
+- `Model.insertMany(array)` - Inserts multiple documents into the collection efficiently.
+- `Model.populate(path)` - Populates referenced fields with actual documents.
+- `Model.watch()` - Watches for changes in the collection using MongoDB change streams.
+- `Model.aggregate(pipeline)` - Performs complex aggregation operations.
+- `Model.startSession()` - Starts a MongoDB transaction session for handling multiple operations atomically.
+- `Model.validate(document)` - Validates a document against the schema before saving.
+- `Model.syncIndexes()` - Synchronizes indexes with the database.
+- `Model.hydrate(obj)` - Converts a plain JavaScript object into a Mongoose document.
+- `Model.distinct(field)` - Finds distinct values for a specified field.
 
-### Sending Data
+# npm Packages Needed/Installed
 
-- `res.write(chunk)` - Writes data to the response body.
-- `res.end([data])` - Signals the response is complete, optionally sending a final chunk of data.
-
-### Handling Status Codes
-
-- `res.statusCode = number` - Sets the HTTP status code.
-- `res.statusMessage = "message"` - Customizes the status message.
-
-### Response Control
-
-- `res.flushHeaders()` - Forces headers to be written immediately.
-- `res.hasHeader(name)` - Checks if a header exists.
-
-### HTTP Methods
-
-- `GET` - Retrieves data from the server.
-- `POST` - Sends data to the server to create a new resource.
-- `PUT` - Updates or replaces an existing resource on the server.
-- `HEAD` - Similar to `GET`, but only retrieves headers (no body).
-- `DELETE` - Removes a resource from the server.
-- `PATCH` - Partially updates an existing resource.
-- `OPTIONS` - Returns the supported HTTP methods for a resource.
-
-**Reference to Article:** [The 7 Methods](https://assertible.com/blog/7-http-methods-every-web-developer-should-know-and-how-to-test-them)
-
-<img width="558" alt="Image" src="https://github.com/user-attachments/assets/eeecca66-6921-45ed-83c6-fad17a1dfdce" />
+- `npm i express`
+- `npm i morgan`
+- `npm i dotenv`
+- `npm i -D nodemon`
+- `npm i mongoose`
 
 # 🛠️ 🐛 Progress/Bugs
 
-### ⚙️ Creating a basic server and it's setup:
+### ⚙️ Creating a database and connecting it:
 
 ### ╰┈➤
 
 ```js
-const http = require("http");
+const mongoose = require('mongoose'); // npm package for easy connection to MongoDB
 
-const server = http.createServer((req, res) => {
-  res.setHeader("Content-Type", "text/plain");
-  res.end("Hello World\n");
-});
-
-const PORT = 3000;
-
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
-});
-```
-
-### 🚧 Running the server with **_Nodemon_** for effective development.
-
-### ╰┈➤
-
-```json
-"scripts": {
-  "start": "node server.js",
-  "dev": "nodemon server.js"
+const connectDB = async () => { // async func to connect to db, needs time
+    try { // try to connect to db 
+        const conn = await mongoose.connect(process.env.MONGODB_URI); // using env variables for db URI
+        // useUnifiedTopology: true, is no longer needed; is a deprecated option
+        console.log(`Connected to MongoDB successfully: ${conn.connection.host}.`);
+    } catch (error) { // if connection failed; error out message
+        console.error(error)
+    } 
 }
+
+module.exports = connectDB;
 ```
-
-<img width="344" alt="Image" src="https://github.com/user-attachments/assets/0eeb06c8-e3b2-4334-a933-64702874ff0e" />
-
-```bash
-# This will run nodemon server.js for updates on save
-npm run dev
-```
-
-### 🧐 Test your running server/setup with Postman.
-
-### ╰┈➤
-
-<img width="600" alt="Image" src="https://github.com/user-attachments/assets/a2367ac3-efc3-4b05-bd02-6107de151b76" />
-
-### 🗂️ Let's make our **_own_** API.
-
-### ╰┈➤
 
 ```js
-const http = require("http"); // importing the http module from node:http
+require('dotenv').config(); // import once, for use of env variables thru-out application/api
+const app = require('./app'); // main app >>> All dev inside this folder
+const connectDB = require('./app/db/config'); // require the config file 
 
-const arrayList = [
-  { id: 1, item: "item 1" },
-  { id: 2, item: "item 2" },
-  { id: 3, item: "item 3" },
-  { id: 4, item: "item 4" },
-]; // array list
+connectDB(); // connect to database
 
-const server = http.createServer((req, res) => {
-  // using the createServer method from http module
-  res.setHeader("Content-Type", "application/json"); // setting the response for the header
+const PORT = process.env.PORT || 3000;
 
-  res.end(
-    // ending/final response
-    JSON.stringify(
-      // This is to convert object to string, err: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array.
-      {
-        sucess: true,
-        method: req.method,
-        data: arrayList,
-      }
-    )
-  );
-});
-
-const PORT = 3000; // setting port number
-
-server.listen(PORT, () => {
-  // listen to the port and then console log message
-  console.log(`Server running at http://localhost:${PORT}/`);
+app.listen(PORT, () => { // event handler (listen) - console message
+    console.log(`Server is running on port: ${PORT}`);
 });
 ```
 
-<img width="523" alt="Image" src="https://github.com/user-attachments/assets/156b197a-a328-4773-975d-69220ed1a4d8" />
-
-# ⛁ Working w/ Routes in **_ExpressJS_**
-
-### [![My Skills](https://skillicons.dev/icons?i=express)](https://skillicons.dev)╰┈➤
-
-### ⚙️ Setup + Environment Variables
-
-- Download and install the following **npm** packages:
-
-```bash
-# This will install express and we need to make a .env file
-npm install express dotenv
-```
-
-- Now we alter our code to use **NodeJS** w/ _Express_.
-
-**_server.js_**
-
-```js
-const http = require("http"); // importing the http module from node:http
-require("dotenv").config(); // import environment variables from .env file
-const app = require("./app"); // import data from index.js
-
-const server = http.createServer(app); // throw data from express app to http server
-
-server.listen(process.env.PORT, () => {
-  // listen to the port and then console log message
-  console.log(`Server running at http://localhost:${process.env.PORT}/`);
-});
-```
-
-**_app/index.js_**
-
-```js
-const express = require("express");
-// import { express } from 'express';
-
-const app = express();
-
-app.get("/", (req, res) => {
-  // use '/' route
-  res.status(200).json({
-    // get status 200 - success and return data into JSON
-    message: "GET - root",
-    metadata: {
-      hostname: req.hostname,
-      method: req.method,
-    },
-  });
-});
-
-module.exports = app; // export app, used in server.js file
-```
