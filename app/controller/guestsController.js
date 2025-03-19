@@ -1,4 +1,5 @@
 const Guests = require('../models/Guests'); // import the Guests model
+const Rooms = require('../models/Rooms'); // import the rooms model
 
 const getAllGuests = async (req, res) => { // get all guests func
     try {
