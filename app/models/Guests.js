@@ -36,7 +36,13 @@ const guestsSchema = new mongoose.Schema({ // new class model
         required: true,
         min: [18, "18+! Sorry."],
         max: [120, "No way you're that old. Try again."]
-    }
+    },
+    rooms: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Rooms"
+        }
+    ]
 });
 
 module.exports = mongoose.model("Guests", guestsSchema); // defining the 'Guests' model

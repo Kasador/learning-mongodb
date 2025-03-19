@@ -16,12 +16,16 @@ const roomsSchema = new mongoose.Schema({ // new class model
         type: Boolean,
         default: false
     },
-    reservations: [{
-        guestId: { type: mongoose.Schema.Types.ObjectId, ref: "Guests" }, // connects to the 'Guests' schema
-        checkInDate: { type: Date, required: true },
-        checkOutDate: { type: Date, required: true }
-    }]},
-{ timestamps: true });
+    // reservations: [{
+    //     guestId: { type: mongoose.Schema.Types.ObjectId, ref: "Guests" }, // connects to the 'Guests' schema
+    //     checkInDate: { type: Date, required: true },
+    //     checkOutDate: { type: Date, required: true }
+    // }]},
+    guests: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Guests"
+    },
+}, {timestamps: true});
 
 module.exports = mongoose.model("Rooms", roomsSchema); // defining the 'Rooms' model
 

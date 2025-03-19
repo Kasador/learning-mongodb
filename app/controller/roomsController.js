@@ -1,4 +1,5 @@
 const Rooms = require('../models/Rooms'); // import the rooms model
+const Guests = require('../models/Guests'); // import the Guests model
 
 const getAllRooms = async (req, res) => { // get all rooms func
     try {
@@ -44,14 +45,19 @@ const getRoomById = async (req, res) => { // get rooms by id func
 }
 
 const createRoom = async (req, res) => { // create new room func
-    const { room } = req.body;
-
     try {
-        const newRoom = await Rooms.create(room); // name of schema - "Rooms"
-        console.log("data: ", newRoom); 
+        const { room } = req.body;
+        const user = await Guests.findById(room.guests);
+        room.guests = user;
+
+        const guestData = new Rooms(room);
+        user.rooms.push(guestData._id);
+
+        const queries = [guestData.save(), user.save()];
+        await Promise.all(queries);
 
         res.status(200).json({
-            data: newRoom,
+            data: guestData,
             success: true,
             message: `Request Made: ${req.method} from Rooms endpoint.`
         });
